@@ -51,7 +51,7 @@ public class EmployeeTest extends ApplicationTest{
     }
 
     /**
-     * 搜索
+     * 搜索测试
      */
     @Test
     public void search() throws Exception {
