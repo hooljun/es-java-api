@@ -26,6 +26,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 封装通用的操作ES方法
@@ -55,9 +56,9 @@ public class BaseRepositoryImpl<T> implements IBaseRepository<T> {
             //获取子类的index和type字段,并赋值给自己
             Field[] fields = childClass.getDeclaredFields();
             for(Field field : fields){
-                if(field.getName().equals("index"))
+                if(Objects.equals(field.getName(),"index"))
                     baseIndex = field.getAnnotation(RepositoryName.class).value();
-                else if(field.getName().equals("type"))
+                else if(Objects.equals(field.getName(),"type"))
                     baseType = field.getAnnotation(RepositoryName.class).value();
             }
             //获取定义在父类上的泛型参数对象
