@@ -1,6 +1,6 @@
 package com.es.qo;
 
-import com.es.vo.EmployeeVo;
+import com.es.entity.EmployeeEntity;
 import lombok.Getter;
 import lombok.Setter;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -13,6 +13,8 @@ import java.util.Arrays;
 
 /***
  * 员工资源查询对象
+ * @date 2019/8/12
+ * @author luohaipeng
  */
 @Setter@Getter
 public class EmployeeQueryObject extends QueryObject {
@@ -52,7 +54,7 @@ public class EmployeeQueryObject extends QueryObject {
         //设置高亮字段
         super.setHighlightFields(o,hit);
         HighlightField highlightField = hit.getHighlightFields().get("about");
-        EmployeeVo employeeVo = (EmployeeVo) o;
-        employeeVo.setAbout(Arrays.toString(highlightField.getFragments()));
+        EmployeeEntity employeeEntity = (EmployeeEntity) o;
+        employeeEntity.setAbout(Arrays.toString(highlightField.getFragments()));
     }
 }

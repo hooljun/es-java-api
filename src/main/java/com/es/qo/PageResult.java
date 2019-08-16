@@ -8,20 +8,36 @@ import java.util.List;
 
 /**
  * 封装分页数据
+ * @date 2019/8/12
+ * @author luohaipeng
  * @param <T>
  */
 @Setter@Getter
 public class PageResult<T> extends QueryObject {
 
-    //具体的数据
+    /**
+     * 具体的数据
+     */
     private List<T> data;
-    //总数据量
+
+    /**
+     * 总数据量
+     */
     private Integer totalCount;
-    //总页数
+
+    /**
+     * 总页数
+     */
     private Integer totalPage;
-    //上一页
+
+    /**
+     * 上一页
+     */
     private Integer prevPage;
-    //下一页
+
+    /**
+     * 下一页
+     */
     private Integer nextPage;
 
 

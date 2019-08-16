@@ -6,7 +6,11 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * BeanUtil
+ * @date 2019/8/12
+ * @author luohaipeng
+ */
 public class BeanUtil {
 
     public static <T>T map2Bean(Map map,Class<T> type) throws Exception {

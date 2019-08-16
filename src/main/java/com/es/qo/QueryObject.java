@@ -10,28 +10,44 @@ import java.io.Serializable;
 
 /**
  * 查询条件相关属性对象
+ * @date 2019/8/12
+ * @author luohaipeng
  */
 @Setter@Getter
 public class QueryObject implements Serializable{
 
-    //当前页
+
+    /**
+     * 当前页
+     */
     protected Integer currentPage = 1;
 
-    //每页显示的数据大小
+
+    /**
+     * 每页显示的数据大小
+     */
     protected Integer pageSize = 10;
 
-    //搜索关键字
+
+    /**
+     * 搜索关键字
+     */
     protected String keyword;
 
 
-    //开始的记录数
+
+
+    /**
+     * 开始的记录数
+     * @return 开始的记录数
+     */
     public Integer getStart(){
         return (currentPage - 1) * pageSize;
     }
 
     /**
      * 创建SearchSourceBuilder，并设置通用的属性
-     * @return
+     * @return SearchSourceBuilder
      */
     public SearchSourceBuilder createSearchSourceBuilder(){
         //这里可以给searchSourceBuilder设置一些通用的条件
@@ -43,7 +59,7 @@ public class QueryObject implements Serializable{
 
     /**
      * 创建HighlightBuilder对象，并设置一些通用的属性
-     * @return
+     * @return HighlightBuilder
      */
     public HighlightBuilder createHighlightBuilder(){
         //这里可以给HighlightBuilder设置一些通用的高亮配置

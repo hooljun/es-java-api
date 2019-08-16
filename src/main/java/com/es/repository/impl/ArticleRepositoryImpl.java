@@ -1,22 +1,18 @@
 package com.es.repository.impl;
 
+import com.es.entity.ArticleEntity;
 import com.es.repository.IArticleRepository;
-import com.es.util.RepositoryName;
-import com.es.vo.ArticleVo;
+import com.es.util.IndexName;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-
+/**
+ * ArticleRepository
+ * @date 2019/8/12
+ * @author luohaipeng
+ */
 @Component
 @Slf4j
-public class ArticleRepositoryImpl extends BaseRepositoryImpl<ArticleVo> implements IArticleRepository {
-
-    //索引
-    @RepositoryName("articles-1")
-    protected String index;
-
-    //类型
-    @RepositoryName("article")
-    protected String type;
+public class ArticleRepositoryImpl extends BaseRepositoryImpl<ArticleEntity> implements IArticleRepository {
 
 
     /**

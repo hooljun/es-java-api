@@ -8,6 +8,8 @@ import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 /**
  * 文章资源的查询对象
+ *  @date 2019/8/12
+ *  @author luohaipeng
  */
 @Setter@Getter
 public class ArticleQueryObject extends QueryObject {

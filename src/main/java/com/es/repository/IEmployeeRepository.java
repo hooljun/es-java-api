@@ -1,9 +1,13 @@
 package com.es.repository;
 
-import com.es.vo.EmployeeVo;
+import com.es.entity.EmployeeEntity;
 
-
-public interface IEmployeeRepository extends IBaseRepository<EmployeeVo>{
+/**
+ * EmployeeRepository
+ * @date 2019/8/12
+ * @author luohaipeng
+ */
+public interface IEmployeeRepository extends IBaseRepository<EmployeeEntity>{
 
 
 }

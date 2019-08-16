@@ -3,7 +3,7 @@ package com.es;
 import com.es.qo.ArticleQueryObject;
 import com.es.qo.PageResult;
 import com.es.repository.IArticleRepository;
-import com.es.vo.ArticleVo;
+import com.es.entity.ArticleEntity;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,10 +19,10 @@ public class ArticleTest extends ApplicationTest{
      */
     @Test
     public void inster() throws Exception {
-        ArticleVo article = new ArticleVo();
+        ArticleEntity article = new ArticleEntity();
         article.setId(2L);
-        article.setTitle("这是一篇文档2");
-        article.setContent("这是一篇文档这是一篇文档这是一篇文档这是一篇文档2");
+        article.setTitle("这是一篇文档222");
+        article.setContent("这是一篇文档这是一篇文档这是一篇文档这是一篇文档222");
         articleRepository.insertOrUpdate(article);
     }
 
@@ -39,7 +39,7 @@ public class ArticleTest extends ApplicationTest{
      */
     @Test
     public void get() throws Exception {
-        ArticleVo article = articleRepository.get(3L);
+        ArticleEntity article = articleRepository.get(1L);
         System.out.println(article);
     }
 
@@ -49,7 +49,7 @@ public class ArticleTest extends ApplicationTest{
      */
     @Test
     public void getAll() throws Exception {
-        List<ArticleVo> list = articleRepository.getAll();
+        List<ArticleEntity> list = articleRepository.getAll();
         list.forEach(articleVo -> {
             System.out.println(articleVo);
         });
