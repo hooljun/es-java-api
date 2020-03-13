@@ -1,0 +1,6 @@
+../es-java-api/target
+.idea
+.settings
+.classpath
+.project
+*.iml
